@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Food Calorie Estimator</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+            text-align:center;
+            padding-top:60px;
+        }
+        .box{
+            background:white;
+            padding:30px;
+            width:400px;
+            margin:auto;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+        input{
+            padding:10px;
+            width:80%;
+            margin:10px;
+        }
+        button{
+            padding:10px 20px;
+            background:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+<h2>🍔 AI Food Calorie Estimation</h2>
+
+<form method="POST">
+<input type="text" name="food" placeholder="Enter food name" required>
+<br>
+<button type="submit">Check</button>
+</form>
+
+{% if result %}
+<hr>
+<h3>Result:</h3>
+<p><b>Food:</b> {{result.food}}</p>
+<p><b>Calories:</b> {{result.calories}}</p>
+<p><b>Protein:</b> {{result.protein}}</p>
+<p><b>Carbs:</b> {{result.carbs}}</p>
+<p><b>Fibre:</b> {{result.fibre}}</p>
+<p><b>Sugar:</b> {{result.sugar}}</p>
+<p><b>Potassium:</b> {{result.potassium}}</p>
+{% endif %}
+
+</div>
+</body>
+</html>
